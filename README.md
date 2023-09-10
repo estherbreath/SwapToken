@@ -10,4 +10,6 @@ npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.ts
+
+ SwapToken address: 0x95d1FA946BD7655bAcD20F484a0E90C01769E582;
 ```
