@@ -2,8 +2,10 @@ import { ethers } from "hardhat";
 
 
 async function main() {
+  const BossladyToken = "0x8Ec601e4410891CB2f2abF7c7031B0a3e84869eC"
+  const yourtoken = "0x76202af4a9d5a30198665786c15e4feEc2b2451D"
 
-    const swap = await ethers.deployContract("TokenSwapper", ["0x6f65F28b9B4A1D23662523838DD1377004028443", "0x50aee728897bb32B8fbf649cE2fc5f3cAec2Ed97"] );
+    const swap = await ethers.deployContract("TokenSwapper", [BossladyToken, yourtoken] );
   
    
     await swap.waitForDeployment()
