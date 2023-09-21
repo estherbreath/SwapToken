@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.19;
 
-interface IERC20 {
+interface IMyERC20 {
     function name() external view returns (string memory);
     function symbol() external view returns (string memory);
     function balanceOf(address _owner) external view returns (uint256 balance);
