@@ -13,38 +13,38 @@ const [signer1] = await ethers.getSigners()
     let bToken = await ethers.getContractAt("IERC20",  bossladyToken)
     let yToken = await ethers.getContractAt("IERC20", yourToken)
 
-    // const impersonatedSigner = await ethers.getImpersonatedSigner(signer)
-    // const approveBossladyToken = ethers.parseEther("500")
-    // const approveYourToken = ethers.parseEther("500")
+    const impersonatedSigner = await ethers.getImpersonatedSigner(signer)
+    const approveBossladyToken = ethers.parseEther("500")
+    const approveYourToken = ethers.parseEther("500")
 
-    // const approveA = await bToken.approve(swap, approveBossladyToken)
-    // const approveB = await yToken.approve(swap, approveYourToken)
+    const approveA = await bToken.approve(swap, approveBossladyToken)
+    const approveB = await yToken.approve(swap, approveYourToken)
 
-    // await approveA.wait()
-    // await approveB.wait()
+    await approveA.wait()
+    await approveB.wait()
 
     // const allowanceA = await bToken.allowance(signer1.address, swapToken)
     // const allowanceB = await yToken.allowance(signer1.address, swapToken)
 
     // console.log(allowanceA,allowanceB)
-    // const liquidityA = ethers.parseEther("500")
-    // const liquidityB = ethers.parseEther("500")
+    const liquidityA = ethers.parseEther("500")
+    const liquidityB = ethers.parseEther("500")
 
-    // console.log(signer1.address)
+    console.log(signer1.address)
 
     // const liquid = await swap.addLiquidity(liquidityA, liquidityB)
 
     // await liquid.wait()
     // console.log("liquidity added")
 
-    // const liquid = await swap.removeLiquidity(liquidityA, liquidityB)
+    const liquid = await swap.removeLiquidity(liquidityA, liquidityB)
 
-    // await liquid.wait()
+    await liquid.wait()
 
-    // const allowanceA = await bToken.allowance("0x77aC3a62c12333DD9604f8D5cD6E350Cd33D04b4", swap)
-    // const allowanceB = await yToken.allowance("0x77aC3a62c12333DD9604f8D5cD6E350Cd33D04b4", swap)
+    const allowanceA = await bToken.allowance("0x77aC3a62c12333DD9604f8D5cD6E350Cd33D04b4", swap)
+    const allowanceB = await yToken.allowance("0x77aC3a62c12333DD9604f8D5cD6E350Cd33D04b4", swap)
 
-    // console.log(allowanceA,allowanceB)
+    console.log(allowanceA,allowanceB)
 
     const swapB = await swap.swapToB(ethers.parseEther("100"));
     await swapB.wait();
